@@ -1,0 +1,73 @@
+h1 {
+	font-family: monospace;
+	text-align: center;
+	font: bold;
+	font-size: 88px;
+	background: linear-gradient(90deg, #ff6a00, #ee0979);
+	text-shadow: 2px 2px 4px #000, 0 0 10 px #ff6a00;
+	letter-spacing: 4px;
+}
+
+img {
+	border-radius: 10px;
+	width: 200px;
+	margin: 20px;
+	transition: all 0.3s ease;
+}
+
+img:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 10px #aaa;
+}
+
+.gallery1 {
+	display: flex;
+	gap: 20px;
+	font-family: monospace;
+}
+
+.gallery2 {
+	display: flex;
+	gap: 20px;
+	font-family: monospace;
+}
+
+.gallery3 {
+	display: flex;
+	gap: 20px;
+	font-family: monospace;
+}
+
+.gallery4 {
+	display: flex;
+	gap: 20px;
+	font-family: monospace;
+}
+
+.item {
+	text-align: center;
+}
+
+.item button {
+	margin-top: 1px;
+
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-family: monospace;
+
+}
+.cart-item button {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: monospace;
+
+}
+
