@@ -13,6 +13,8 @@ img {
 	width: 200px;
 	margin: 20px;
 	transition: all 0.3s ease;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.1);
+
 }
 
 img:hover {
@@ -24,24 +26,28 @@ img:hover {
 	display: flex;
 	gap: 20px;
 	font-family: monospace;
+	font-weight: bolder;
 }
 
 .gallery2 {
 	display: flex;
 	gap: 20px;
 	font-family: monospace;
+	font-weight: bolder;
 }
 
 .gallery3 {
 	display: flex;
 	gap: 20px;
 	font-family: monospace;
+	font-weight: bolder;
 }
 
 .gallery4 {
 	display: flex;
 	gap: 20px;
 	font-family: monospace;
+	font-weight: bolder;
 }
 
 .item {
@@ -50,24 +56,92 @@ img:hover {
 
 .item button {
 	margin-top: 1px;
+	padding: 10px 15px;
+	border-radius: 8px;
+	color: white;
+	background-color: #fa8c37;
+	transition: all 0.3s ease;
+	font-weight: bold;
 
+}
+
+.item button:hover {
+	margin-top: 1px;
+	padding: 10px 15px;
+	border-radius: 8px;
+	color: white;
+	background-color: darkorange;
+	transform: scale(1.1);
+
+}
+
+.item button:active {
+	transform: translateY(2px);  /* moves button down slightly */
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+#floating-cart {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 2px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+
+#cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+#cart-body {
+  padding: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  margin: 5px 0;
-  font-family: monospace;
-
+  margin-bottom: 5px;
 }
+
 .cart-item button {
   background: red;
   color: white;
   border: none;
   cursor: pointer;
-  padding: 4px 12px;
+  padding: 5px 10px;
   border-radius: 4px;
-  font-family: monospace;
-
 }
 
+/* Hidden cart when collapsed */
+#floating-cart.collapsed {
+  right: -300px; /* hide completely */
+}
+
+#toggle-cart {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 40px;
+  height: 60px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
